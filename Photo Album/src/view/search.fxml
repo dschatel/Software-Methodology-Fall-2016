@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="650.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.SearchController">
+   <children>
+      <MenuBar prefHeight="25.0" prefWidth="650.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem fx:id="logOut" mnemonicParsing="false" text="Log Out" />
+                  <MenuItem fx:id="quit" mnemonicParsing="false" text="Quit" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <BorderPane layoutY="24.0" prefHeight="426.0" prefWidth="650.0">
+         <bottom>
+            <AnchorPane prefHeight="127.0" prefWidth="650.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Button fx:id="formAlbum" layoutX="381.0" layoutY="67.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="119.0" text="Form Album" />
+                  <Button fx:id="searchPhotos" layoutX="381.0" layoutY="14.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="119.0" text="Search" />
+                  <Button fx:id="viewPhoto" layoutX="517.0" layoutY="14.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="119.0" text="View Photo" />
+                  <Button fx:id="returnToSummary" layoutX="517.0" layoutY="67.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="119.0" text="Return to Summary" />
+                  <ListView fx:id="tagList" layoutX="7.0" layoutY="62.0" prefHeight="52.0" prefWidth="343.0" />
+                  <Text layoutX="7.0" layoutY="48.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tag Type:" wrappingWidth="59.771484375" />
+                  <Text layoutX="146.0" layoutY="48.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tag Value:" wrappingWidth="59.771484375" />
+                  <TextField fx:id="tagType" layoutX="60.0" layoutY="31.0" prefHeight="25.0" prefWidth="80.0" />
+                  <TextField fx:id="tagValue" layoutX="206.0" layoutY="31.0" prefHeight="25.0" prefWidth="81.0" />
+                  <Button fx:id="addTag" layoutX="296.0" layoutY="31.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="26.0" text="+" />
+                  <DatePicker fx:id="dateStartRange" layoutX="6.0" layoutY="2.0" prefHeight="25.0" prefWidth="170.0" />
+                  <DatePicker fx:id="dateEndRange" layoutX="206.0" layoutY="2.0" prefHeight="25.0" prefWidth="147.0" />
+                  <Separator layoutX="359.0" layoutY="8.0" orientation="VERTICAL" prefHeight="112.0" prefWidth="3.0" />
+                  <Button fx:id="deleteTag" layoutX="325.0" layoutY="31.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="26.0" text="-" />
+               </children></AnchorPane>
+         </bottom>
+         <center>
+            <TableView fx:id="photoList" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <columns>
+                  <TableColumn fx:id="photoPreview" editable="false" prefWidth="111.0" resizable="false" sortable="false" text="Preview" />
+                  <TableColumn fx:id="caption" editable="false" prefWidth="350.0" resizable="false" sortable="false" text="Caption" />
+                  <TableColumn fx:id="dateAdded" editable="false" prefWidth="188.0" resizable="false" sortable="false" text="Date Added" />
+               </columns>
+            </TableView>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>

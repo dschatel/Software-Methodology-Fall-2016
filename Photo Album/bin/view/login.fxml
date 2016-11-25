@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="650.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.LoginController">
+   <children>
+      <MenuBar prefHeight="25.0" prefWidth="650.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem fx:id="logOut" mnemonicParsing="false" text="Log Out" />
+                  <MenuItem fx:id="quit" mnemonicParsing="false" text="Quit" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <TextField fx:id="usernameField" layoutX="239.0" layoutY="188.0" />
+      <PasswordField fx:id="passwordField" layoutX="239.0" layoutY="230.0" />
+      <Text layoutX="176.0" layoutY="205.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Username:" />
+      <Text layoutX="178.0" layoutY="247.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password:" />
+      <Button fx:id="loginButton" layoutX="403.0" layoutY="230.0" mnemonicParsing="false" text="Log In" />
+      <Text fx:id="errorText" layoutX="222.0" layoutY="277.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Test" wrappingWidth="182.13671875" />
+   </children>
+</AnchorPane>
